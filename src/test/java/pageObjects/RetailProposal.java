@@ -44,6 +44,9 @@ public class RetailProposal extends BasePage
      @FindBy(xpath="//input[@id='prospectDob']")
      WebElement dob;
      
+     @FindBy(xpath="//td[normalize-space()='Prospect Type']")
+     WebElement afterdobjustaclick;
+     
      @FindBy(xpath="//select[@id='customerTypeInput']")
      WebElement prospecttype;
      
@@ -65,8 +68,8 @@ public class RetailProposal extends BasePage
      @FindBy(xpath="//select[@id='region']")
      WebElement prospectregion;
      
-     @FindBy(xpath="//select[@id='city']")
-     WebElement prospectcity;
+    // @FindBy(xpath="//select[@id='city']")
+     //WebElement prospectcity;
      
      
      
@@ -145,7 +148,7 @@ public class RetailProposal extends BasePage
 	 * @return the sob
 	 */
 	public WebElement getSob() {
-		return sob;
+		return sob; 
 	}
 	
 	/**
@@ -167,6 +170,13 @@ public class RetailProposal extends BasePage
 	 */
 	public WebElement getLastname() {
 		return lastname;
+	}
+	
+	/**
+	 * @return the dob
+	 */
+	public WebElement getAfterdobjustaclick() {
+		return afterdobjustaclick;
 	}
 	
 	/**
@@ -224,9 +234,9 @@ public class RetailProposal extends BasePage
 	/**
 	 * @return the prospectcity
 	 */
-	public WebElement getProspectcity() {
-		return prospectcity;
-	}
+	//public WebElement getProspectcity() {
+	//	return prospectcity;
+	//}
 	
 	
 	

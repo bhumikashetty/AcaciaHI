@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.BankMaster;
 
-public class TC01_BankMaster extends BaseClassAcacia
+public class TC01_BankMaster extends  BaseClassAcacia
 {
 	@Test
 	public void CreateBankMaster() throws InterruptedException
@@ -18,28 +18,28 @@ public class TC01_BankMaster extends BaseClassAcacia
 		bm.getMaster().click();
 		bm.getBankmaster().click();
 		bm.getCreatebank().click();
-		Thread.sleep(3000);
+		//Thread.sleep(500);
 		bm.getAddbutton().click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		bm.getClickokonalertmessage().click();
-		Thread.sleep(3000);
+		//Thread.sleep(1000);
 		
-		//bm.getTxtbankname().sendKeys(randomString().toUpperCase());
-		bm.getTxtbankname().sendKeys("HDDVFfFFDFu4");
+		bm.getTxtbankname().sendKeys(randomString().toUpperCase());
+		//bm.getTxtbankname().sendKeys("HDDVFfFFDFu4");
 		bm.getCurrency().click();;
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
 		//currency
         Select currencydropdown =new Select(bm.getCurrency());
 		
 		currencydropdown.selectByValue("2171");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		
 		//active
 	    Select activedropdown =new Select(bm.getActive());
 		
 		activedropdown.selectByValue("Y");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		
 		//to check branch code is mandatory or not
 		WebElement label = driver.findElement(By.xpath("//body[1]/table[1]/tbody[1]/tr[3]/td[1]/div[1]/form[1]/table[1]/tbody[1]/tr[4]/td[1]/table[1]/tbody[1]/tr[5]/td[1]/fieldset[1]/table[1]/tbody[1]/tr[1]/td[1]"));
@@ -72,12 +72,12 @@ public class TC01_BankMaster extends BaseClassAcacia
         }
         	
        		
-		//bm.getBankbranchcode().sendKeys(randomAlphaNumeric());
-		bm.getBankbranchcode().sendKeys("HVVDFFFFsC0008");
+		bm.getBankbranchcode().sendKeys(randomAlphaNumeric());
+		//bm.getBankbranchcode().sendKeys("HVVDFFFFsC0008");
 		
 	    
-		//bm.getBankbranchname().sendKeys(randomString().toUpperCase());
-		bm.getBankbranchname().sendKeys("HUBGsFDGGYytF71 Layout");
+		bm.getBankbranchname().sendKeys(randomString().toUpperCase());
+		//bm.getBankbranchname().sendKeys("HUBGsFDGGYytF71 Layout");
 		//bm.getAddress().sendKeys(randomString().toUpperCase());
 		bm.getAddress().sendKeys("TowerDD 59, graden road, wood street");
 		bm.getContactpersonname().sendKeys("Gilbert");
@@ -90,10 +90,10 @@ public class TC01_BankMaster extends BaseClassAcacia
 		Select branchactivedp=new Select(bm.getBranchactive());
 		
 		branchactivedp.selectByValue("Y");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		
 	//	bm.getSubmit().click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		
 		
 	}

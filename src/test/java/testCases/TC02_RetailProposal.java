@@ -48,9 +48,10 @@ public class TC02_RetailProposal extends BaseClassAcacia
 		rp.getFirstname().sendKeys("Nam");
 		rp.getLastname().sendKeys("Kumar");
 		rp.getDob().sendKeys("03-04-1990");
+		rp.getAfterdobjustaclick().click();
 		
 		Select prospecttype=new Select(rp.getProspecttype());
-		plantype.selectByVisibleText("VIP");
+		prospecttype.selectByValue("NORMAL");
 		
 		rp.getGhanacard().sendKeys("32424HGHFe");
 		rp.getProspectemail().sendKeys("nam@gmail.com");
@@ -58,13 +59,13 @@ public class TC02_RetailProposal extends BaseClassAcacia
 		rp.getProspectaddress().sendKeys("Tower GH");
 		
 		Select prospectcountry=new Select(rp.getProspectcountry());
-		plantype.selectByVisibleText("VIP");
+		prospectcountry.selectByVisibleText("Ghana");
 		 
 		Select prospectregion=new Select(rp.getProspectregion());
-		plantype.selectByVisibleText("VIP");
+		prospectregion.selectByVisibleText("GREATER ACCRA");
 		
-		Select prospectcity=new Select(rp.getProspectcity());
-		plantype.selectByVisibleText("VIP");
+		//Select prospectcity=new Select(rp.getProspectcity());
+		//prospectcity.selectByVisibleText("");
 		
 		
 	}
